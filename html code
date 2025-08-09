@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Redesign: Before & After</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Website Redesign Comparison</h1>
+        
+        <div class="flex justify-center mb-10">
+            <button onclick="switchTab('before')" class="tab-btn px-6 py-3 bg-gray-800 text-white rounded-l-lg font-medium">Before</button>
+            <button onclick="switchTab('after')" class="tab-btn px-6 py-3 bg-indigo-600 text-white rounded-r-lg font-medium active">After</button>
+        </div>
+        
+        <!-- BEFORE -->
+        <div id="before" class="tab-content bg-white rounded-lg shadow-md p-6 mb-20">
+            <div class="max-w-6xl mx-auto">
+                <!-- Old Header -->
+                <header class="bg-blue-900 text-white py-4">
+                    <div class="container mx-auto px-4 flex justify-between items-center">
+                        <h1 class="text-2xl font-bold">COMPANY</h1>
+                        <nav>
+                            <ul class="flex space-x-6">
+                                <li><a href="#" class="hover:underline">Home</a></li>
+                                <li><a href="#" class="hover:underline">Services</a></li>
+                                <li><a href="#" class="hover:underline">About</a></li>
+                                <li><a href="#" class="hover:underline">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                
+                <!-- Old Hero Section -->
+                <div class="bg-gray-200 p-20 text-center">
+                    <h2 class="text-3xl font-bold mb-4">Welcome to Our Company</h2>
+                    <p class="mb-6">We provide excellent services to meet your needs.</p>
+                    <button class="bg-blue-900 text-white px-6 py-2 rounded">Learn More</button>
+                </div>
+                
+                <!-- Old Features -->
+                <div class="py-12 px-4">
+                    <div class="flex flex-wrap -mx-4">
+                        <div class="w-1/3 px-4 mb-8">
+                            <div class="bg-white border rounded p-6">
+                                <h3 class="font-bold mb-2">Service One</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/3 px-4 mb-8">
+                            <div class="bg-white border rounded p-6">
+                                <h3 class="font-bold mb-2">Service Two</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/3 px-4 mb-8">
+                            <div class="bg-white border rounded p-6">
+                                <h3 class="font-bold mb-2">Service Three</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Old Footer -->
+                <footer class="bg-gray-800 text-white py-8">
+                    <div class="container mx-auto px-4 text-center">
+                        <p>© 2023 Company Name. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <!-- AFTER -->
+        <div id="after" class="tab-content active bg-white rounded-lg shadow-md p-6">
+            <div class="max-w-6xl mx-auto">
+                <!-- New Header -->
+                <header class="sticky top-0 z-50 bg-white shadow-sm">
+                    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                        <div class="flex items-center">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/540f5c41-4a65-4df6-b2da-fbd2d9ee20a7.png" alt="Modern abstract company logo with gradient colors from indigo to purple" class="h-10 mr-3" />
+                            <span class="text-xl font-bold text-indigo-900">COMPANY</span>
+                        </div>
+                        <nav class="hidden md:block">
+                            <ul class="flex space-x-8">
+                                <li><a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Home</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Services</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Solutions</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">About</a></li>
+                                <li><a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <button class="md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+                
+                <!-- New Hero Section -->
+                <section class="relative overflow-hidden">
+                    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 h-screen max-h-[800px] flex items-center">
+                        <div class="absolute inset-0 opacity-20">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65b860e3-bfbe-4cd4-9eee-857028990532.png" alt="Abstract geometric background pattern in light colors" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="container mx-auto px-4 relative z-10">
+                            <div class="max-w-2xl">
+                                <h1 class="text-5xl font-bold text-white mb-6 leading-tight">Transform Your Business with <span class="text-yellow-300">Digital Solutions</span></h1>
+                                <p class="text-xl text-indigo-100 mb-8">We help companies innovate with cutting-edge technology and strategic design.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300">Get Started</a>
+                                    <a href="#" class="border border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition duration-300">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Clients Logos -->
+                    <div class="mt-[-80px] relative z-20">
+                        <div class="max-w-5xl mx-auto px-8 py-6 bg-white rounded-xl shadow-xl">
+                            <p class="text-center text-gray-500 mb-4">Trusted by leading companies</p>
+                            <div class="flex flex-wrap justify-center items-center gap-8">
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0ed8e52-617b-45cc-a857-f60653bd8988.png" alt="TechCorp logo in dark blue" class="h-8 opacity-60 hover:opacity-100 transition" />
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bff381d5-2953-41df-9eda-c025bb0102e5.png" alt="InnovaSoft logo in dark purple" class="h-8 opacity-60 hover:opacity-100 transition" />
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2eefca98-75d2-4fe6-a678-2b0095ddbbd4.png" alt="Global Solutions logo in dark green" class="h-8 opacity-60 hover:opacity-100 transition" />
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7f2332b6-b9a9-468a-b8aa-5fc26d98f96d.png" alt="DataVision logo in dark orange" class="h-8 opacity-60 hover:opacity-100 transition" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Features Section -->
+                <section class="py-20 bg-gray-50">
+                    <div class="container mx-auto px-4">
+                        <div class="text-center mb-16">
+                            <span class="inline-block px-4 py-1 bg-indigo-100 text-indigo-600 rounded-full mb-4">WHAT WE OFFER</span>
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Comprehensive Solutions</h2>
+                            <p class="text-xl text-gray-600 max-w-2xl mx-auto">We provide end-to-end services to help your business grow in the digital age</p>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                                <div class="w-14 h-14 bg-indigo-50 rounded-lg flex items-center justify-center mb-6">
+                                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d1683377-51a0-4f05-abd2-71657ab0df9b.png" alt="Icon representing digital strategy service with a chart and arrow" class="w-8" />
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Digital Strategy</h3>
+                                <p class="text-gray-600 mb-5">Customized digital roadmap to transform your business operations.</p>
+                                <a href="#" class="text-indigo-600 font-medium flex items-center">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                                <div class="w-14 h-14 bg-indigo-50 rounded-lg flex items-center justify-center mb-6">
+                                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c553a202-2c24-40fa-bff4-cf17c2e3c0e4.png" alt="Icon representing UX design service with a paintbrush" class="w-8" />
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">UX Design</h3>
+                                <p class="text-gray-600 mb-5">Human-centered design that delights users and drives engagement.</p>
+                                <a href="#" class="text-indigo-600 font-medium flex items-center">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                            
+                            <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                                <div class="w-14 h-14 bg-indigo-50 rounded-lg flex items-center justify-center mb-6">
+                                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b980105c-1d7f-4526-9f1c-87b1a550694d.png" alt="Icon representing technology development with a server rack" class="w-8" />
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Tech Development</h3>
+                                <p class="text-gray-600 mb-5">Robust, scalable technology solutions built for performance.</p>
+                                <a href="#" class="text-indigo-600 font-medium flex items-center">
+                                    Learn more
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Stats Section -->
+                <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+                    <div class="container mx-auto px-4">
+                        <div class="grid md:grid-cols-4 gap-8 text-center">
+                            <div>
+                                <span class="text-5xl font-bold mb-2 inline-block">250+</span>
+                                <p class="text-indigo-100">Happy Clients</p>
+                            </div>
+                            <div>
+                                <span class="text-5xl font-bold mb-2 inline-block">98%</span>
+                                <p class="text-indigo-100">Client Retention</p>
+                            </div>
+                            <div>
+                                <span class="text-5xl font-bold mb-2 inline-block">40+</span>
+                                <p class="text-indigo-100">Expert Team</p>
+                            </div>
+                            <div>
+                                <span class="text-5xl font-bold mb-2 inline-block">10+</span>
+                                <p class="text-indigo-100">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- CTA Section -->
+                <section class="py-20 bg-white">
+                    <div class="container mx-auto px-4">
+                        <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-12 text-center">
+                            <h2 class="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+                            <p class="text-indigo-100 max-w-2xl mx-auto mb-8">Join hundreds of companies who have accelerated their growth with our digital solutions.</p>
+                            <a href="#" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition duration-300">Schedule a Free Consultation</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- New Footer -->
+                <footer class="bg-gray-900 text-gray-400 py-16">
+                    <div class="container mx-auto px-4">
+                        <div class="grid md:grid-cols-4 gap-10 mb-12">
+                            <div>
+                                <div class="flex items-center mb-4">
+                                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4bc14a67-7b1f-45b3-ab21-088fb9745171.png" alt="Company logo in white" class="h-10 mr-3" />
+                                    <span class="text-xl font-bold text-white">COMPANY</span>
+                                </div>
+                                <p class="mb-6">Pioneering digital transformation through innovation and expertise.</p>
+                                <div class="flex space-x-4">
+                                    <a href="#">
+                                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bc592ba8-ddb0-44cd-8945-a462a4ff8d18.png" alt="LinkedIn icon for company social media" class="w-6" />
+                                    </a>
+                                    <a href="#">
+                                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/875c7639-a8dc-4a4b-98a2-01009cc90b96.png" alt="Twitter icon for company social media" class="w-6" />
+                                    </a>
+                                    <a href="#">
+                                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b130a04-0da2-4736-9fcc-76566bb1e614.png" alt="Facebook icon for company social media" class="w-6" />
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-4">Company</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                                    <li><a href="#" class="hover:text-white transition">Services</a></li>
+                                    <li><a href="#" class="hover:text-white transition">Case Studies</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-4">Services</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#" class="hover:text-white transition">Digital Strategy</a></li>
+                                    <li><a href="#" class="hover:text-white transition">UX/UI Design</a></li>
+                                    <li><a href="#" class="hover:text-white transition">Web Development</a></li>
+                                    <li><a href="#" class="hover:text-white transition">Mobile Apps</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-4">Contact</h3>
+                                <address class="not-italic">
+                                    <p class="mb-2">123 Business Ave, Suite 100</p>
+                                    <p class="mb-2">San Francisco, CA 94103</p>
+                                    <p class="mb-2">Phone: (123) 456-7890</p>
+                                    <p>Email: info@company.com</p>
+                                </address>
+                            </div>
+                        </div>
+                        
+                        <div class="pt-6 border-t border-gray-800 text-center">
+                            <p>© 2023 Company Inc. All rights reserved.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        
+        <!-- Design Rationale -->
+        <div class="bg-blue-50 rounded-lg p-8 mt-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Redesign Rationale</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Usability Improvements:</h3>
+                    <ul class="space-y-3 list-disc pl-5 text-gray-600">
+                        <li><strong>Clearer Visual Hierarchy:</strong> Improved typography and spacing to guide users through content</li>
+                        <li><strong>Strategic Calls-to-Action:</strong> More prominent and strategically placed CTAs</li>
+                        <li><strong>Mobile-First Approach:</strong> Fully responsive design for all screen sizes</li>
+                        <li><strong>Enhanced Navigation:</strong> Simplified and more intuitive menu structure</li>
+                        <li><strong>Loading Performance:</strong> Optimized layout and assets for faster loading</li>
+                        <li><strong>Accessibility:</strong> Better color contrast and semantic HTML structure</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Aesthetic Enhancements:</h3>
+                    <ul class="space-y-3 list-disc pl-5 text-gray-600">
+                        <li><strong>Modern Color Scheme:</strong> Professional gradient-based palette with accent colors</li>
+                        <li><strong>Improved Typography:</strong> Better font pairing and sizing for readability</li>
+                        <li><strong>White Space Utilization:</strong> Breathing room between sections for better scanning</li>
+                        <li><strong>Visual Storytelling:</strong> Strategic imagery and icon placement</li>
+                        <li><strong>Micro-interactions:</strong> Subtle hover effects for improved engagement</li>
+                        <li><strong>Consistent Branding:</strong> Unified logo and design elements throughout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+            
+            // Update active button state
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === tabId) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
